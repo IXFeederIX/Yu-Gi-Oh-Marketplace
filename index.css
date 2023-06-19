@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+body{
+    margin:0;
+    padding: 0;
+overflow:hidden;
+    background-color: blue;
+    box-sizing: border-box;
+}
+.logo{
+    width: 35em;
+    height: 15em;
+   margin: 5% auto;
+}
+.start-button {
+  background-color: #f7d800;
+  border: 2px solid #000;
+  border-radius: 25px;
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 10px 2px #000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 25px;
+}
+
+.start-button:hover {
+  background-color: #ffc20e;
+  color: #fff;
+  border: 2px solid #fff;
+  text-shadow: 1px 1px #000;
+}
+.container{
+left: 33%;
+top: 10%;
+text-align: center;
+display: flex;
+flex-direction: column;
+    z-index: 3;
+    position: absolute;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+
+}
+h1 {
+  background-color: blue;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  text-shadow: 2px 2px #000, -2px -2px #000;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 10px 2px #000;
+}
+.left-container{
+    z-index: 2;
+    position:fixed;
+    bottom:0%;
+  
+    transform: translateY(1%);
+}
+.right-container{
+    z-index: 2;
+    position:fixed;
+    bottom:0%;
+    transform: translateY(1%);
+    left: 65%;
+    
+}
+.loading-container {
+  display:none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.loading-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: rgb(15, 15, 15);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: 2px;
+}
+.tips-container {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 5%;
+  bottom: 0%;
+}
+
+.tip-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  overflow: hidden; /* hide any overflow */
+}
+
+.gentip {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+.pot-of-greed{
+  right: 89%;
+  bottom: 0;;
+  position:absolute;
+}
+.pog{
+
+  width: 10em;
+  animation: shake 2s infinite ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(5px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.dots {
+  animation: blinked 1s linear infinite;
+  opacity: 0;
+}
+
+@keyframes blinked {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.card-container {
+  width: 125px;
+  height: 100px;
+  position: relative;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+.loading-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+.left-monster{
+    z-index: 1;
+    position: relative;
+    right: 20%;
+}
+.right-monster{
+    z-index: 1;
+    position: absolute;
+left: 50%;
+top: 1%;
+bottom: 0%;
+float: right;
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+@keyframes blink {
+  0% { background-color: white; }
+  50% { background-color: transparent; }
+  100% { background-color: white; }
+}
+
+.blink-div {
+  animation: blink 1s infinite;
+
+  height: 100vh;
+}
+#particles-js{
+    display:none;
+    z-index:0;
+ position: fixed;
+ width: 100%;
+ opacity: 0.5;
+ height: 100%;
+ top: 0%;
+}
+.float{
+  animation: float 3s ease-in-out infinite;
+}
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
